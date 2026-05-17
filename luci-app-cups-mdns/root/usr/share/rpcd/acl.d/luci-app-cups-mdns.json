@@ -1,0 +1,15 @@
+{
+	"luci-app-cups-mdns": {
+		"description": "Grant UCI access for luci-app-cups-mdns",
+		"read": {
+			"uci": [ "cups-mdns" ],
+			"ubus": {
+				"luci-rpc": [ "getHostHints" ],
+				"network.device": [ "status" ]
+			}
+		},
+		"write": {
+			"uci": [ "cups-mdns" ]
+		}
+	}
+}

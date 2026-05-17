@@ -1,0 +1,14 @@
+{
+	"admin/services/cups-mdns": {
+		"title": "CUPS mDNS",
+		"order": 50,
+		"action": {
+			"type": "view",
+			"path": "cups-mdns"
+		},
+		"depends": {
+			"acl": [ "luci-app-cups-mdns" ],
+			"uci": { "cups-mdns": true }
+		}
+	}
+}
