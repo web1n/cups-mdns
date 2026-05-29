@@ -497,7 +497,7 @@ int ipp_fetch_printers(const char *host, int port, int timeout_sec, struct cups_
 		n = parse_ipp_response(c.data, c.size, list, max_count);
 		if (n < 0) fprintf(stderr, "IPP parse error\n");
 	} else {
-		fprintf(stderr, "IPP HTTP error: curl=%d http=%ld\n", res, http_code);
+		fprintf(stderr, "IPP HTTP error: curl=%d (%s) http=%ld\n", (int)res, curl_easy_strerror(res), http_code);
 	}
 
 	free(c.data);
